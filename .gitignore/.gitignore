@@ -1,0 +1,68 @@
+//: Playground - noun: a place where people can play
+
+import UIKit
+
+
+
+
+func getString(str:String)->String{
+    let length = str.characters.count;
+        
+    if(length==4)
+    {
+        return str;
+    }
+    
+    else if(length>4)
+    {
+        var temp = ""
+        var index = 0;
+        for i in str.characters
+        {
+            temp += String(i);
+            if( index<3)
+            {
+                index = index+1;
+            }else
+            {
+                break;
+            }
+        }
+        return temp
+    }
+
+    else{
+        let diff = 4-length;
+        var strResult = str
+        for _ in 1 ... diff
+        {
+            strResult += "0"
+        }
+    
+     return strResult
+    }
+}
+    getString(str:"qwerq");
+
+
+
+
+func getString1(str:String)->String
+{
+    var test = "";
+    for c in str.characters
+    {
+        if c >= "0"&&c <= "9"
+        {
+            test += String(c);
+        }
+        
+    }
+    return  test
+    
+}
+
+getString1(str: "a3gw345")
+
+
+
